@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <Helmet title="">
       <section className="home">
-        <Container>
+        <Container className="d-flex flex-column justify-content-between align-items-center">
           <Row className="home__header">
             <Col lg="2" xs="4" className="d-flex justify-content-center">
               <div className="logo__container">
