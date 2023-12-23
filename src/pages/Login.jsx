@@ -21,7 +21,6 @@ const Login = () => {
 
   const submitLoginHandler = (e) => {
     e.preventDefault();
-    console.log("Login form submitted");
     resetForm();
   };
 
