@@ -30,7 +30,7 @@ const Home = () => {
             <Col
               lg="10"
               xs="8"
-              className="d-flex align-items-center justify-content-end"
+              className="d-flex align-items-center justify-content-end ps-0"
             >
               <div className="home__btns w-100">
                 <Link to="/login" className="add__patient">
