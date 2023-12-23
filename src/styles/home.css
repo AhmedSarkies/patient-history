@@ -26,7 +26,7 @@
   width: 100%;
 }
 .home .logo__container img.home__logo {
-  width: 85%;
+  width: 100%;
   object-fit: cover;
   margin: 0 auto;
   display: block;
@@ -79,26 +79,14 @@
 .home .home__btns .add__patient:hover i {
   border: 1px solid #0f4fff;
 }
-.home .home__menu {
-  display: none;
-}
-.home .home__menu i {
-  color: #fff;
-  font-size: 2rem;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-.container {
-  position: relative;
-}
 .home__content__container {
-  position: absolute;
-  transform: translate(-50%, 100%);
-  top: 50%;
-  left: 50%;
-  margin: -25px 0px 0px 0px !important;
+  margin: 7rem 0 !important;
+}
+.home__content__container .home__content .home__title {
+  font-size: 2.5rem;
+}
+.home__content__container .home__content .home__text {
+  font-size: 1.25rem;
 }
 .home__search {
   width: 100%;
@@ -134,19 +122,41 @@
   color: #0f4fff;
 }
 @media only screen and (max-width: 992px) {
+  .home__content__container .home__content .home__title {
+    font-size: 2rem;
+  }
+  .home__content__container .home__content .home__text {
+    font-size: 1rem;
+  }
   .home__search__input {
     width: 75%;
+    font-size: 0.9rem;
+  }
+  .search__btn,
+  .search__btn.home__search__btn {
+    font-size: 0.9rem;
   }
   .search__btn.home__search__btn {
     padding: 0.5rem 4rem;
   }
 }
 @media only screen and (max-width: 768px) {
+  .home__content__container .home__content .home__title {
+    font-size: 1.75rem;
+  }
+  .home__content__container .home__content .home__text {
+    font-size: 0.8rem;
+  }
   .home .home__btns {
     gap: 0.75rem;
   }
   .home__search__input {
     width: 80%;
+    font-size: 0.8rem;
+  }
+  .search__btn,
+  .search__btn.home__search__btn {
+    font-size: 0.8rem;
   }
   .search__btn {
     padding: 0.75rem 1.25rem;
@@ -166,6 +176,12 @@
   }
   .home .home__btns {
     gap: 0.5rem;
+  }
+  .home__content__container .home__content .home__title {
+    font-size: 1.5rem;
+  }
+  .home__content__container .home__content .home__text {
+    font-size: 0.75rem;
   }
   .search__btn {
     padding: 0.75rem 1rem;
