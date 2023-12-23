@@ -30,7 +30,7 @@ const Login = () => {
       <section className="login">
         <Container>
           <Row>
-            <Col xxl="12" className="text-center">
+            <Col xxl="12" className="text-center mt-3 mb-2">
               <h1 className="login__title">
                 Welcome to <br />
                 <span className="login__title-highlight">
@@ -47,7 +47,7 @@ const Login = () => {
               md="8"
               sm="10"
               xs="12"
-              className="m-auto text-center"
+              className="m-auto text-center mb-3"
             >
               <form className="form login__form" onSubmit={submitLoginHandler}>
                 <div className="form__header">
