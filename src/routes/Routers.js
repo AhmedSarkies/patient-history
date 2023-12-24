@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Login, Home } from "../pages";
+import { Login, Home, Patient } from "../pages";
 
 const Routers = () => {
   const { pathname } = useLocation();
@@ -11,8 +11,10 @@ const Routers = () => {
 
   return (
     <Routes>
+      <Route path="*" element={<h1>Not Found</h1>} />
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/patient" element={<Patient />} />
     </Routes>
   );
 };
