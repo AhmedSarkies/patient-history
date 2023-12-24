@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Col, Container, Row } from "reactstrap";
 
@@ -11,6 +11,7 @@ import logo from "../assets/images/logo-transparent.png";
 import "../styles/home.css";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
 
   const handleSearch = (e) => {
@@ -75,7 +76,11 @@ const Home = () => {
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                   />
-                  <button type="submit" className="search__btn">
+                  <button
+                    type="submit"
+                    className="search__btn"
+                    onClick={() => navigate("/patient")}
+                  >
                     <svg
                       viewBox="0 0 27 27"
                       fill="none"
@@ -91,6 +96,7 @@ const Home = () => {
                   <button
                     type="submit"
                     className="home__search__btn search__btn mt-4"
+                    onClick={() => navigate("/patient")}
                   >
                     Search By Code
                   </button>
