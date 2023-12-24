@@ -70,14 +70,13 @@
   border: 2px solid #eaeaea;
   transition: all 0.3s ease-in-out;
 }
-.home .home__btns .add__patient i {
-  border: 1px solid #e7fff4;
-  border-radius: 5px;
-  padding: 0.05rem;
-  transition: border 0.3s ease-in-out;
+.home .home__btns .add__patient svg {
+  fill: #e7fff4;
+  width: 1.5rem;
+  transition: all 0.3s ease-in-out;
 }
-.home .home__btns .add__patient:hover i {
-  border: 1px solid #0f4fff;
+.home .home__btns .add__patient:hover svg {
+  fill: #0f4fff;
 }
 .home__content__container {
   margin: 7rem 0 !important;
@@ -120,6 +119,9 @@
 .search__btn.home__search__btn:hover {
   background: #fff;
   color: #0f4fff;
+}
+.search__btn svg {
+  width: 1.2rem;
 }
 @media only screen and (max-width: 992px) {
   .home__content__container .home__content .home__title {
@@ -164,12 +166,21 @@
   .search__btn.home__search__btn {
     padding: 0.5rem 3rem;
   }
+  .search__btn svg {
+    width: 1rem;
+  }
 }
 @media only screen and (max-width: 576px) {
   .home .home__btns .add__patient,
   .home .home__btns .home__login {
     padding: 5px 9px;
     font-size: 0.8rem;
+  }
+  .home .home__btns .add__patient svg {
+    width: 1.25rem;
+  }
+  .home .home__btns .add__patient {
+    gap: 0.25rem;
   }
   .home .home__container {
     padding-right: calc(var(--bs-gutter-x) * 0.5);
