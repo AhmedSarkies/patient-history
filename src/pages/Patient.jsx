@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Outlet } from "react-router-dom";
+
 import { Col, Container, Row } from "reactstrap";
 
 import { Helmet, Navbar } from "../components";
@@ -19,7 +21,9 @@ const Patient = () => {
               <Navbar />
             </Col>
             <Col xl="9">
-              <div className="patient__content"></div>
+              <div className="patient__content">
+                <Outlet />
+              </div>
             </Col>
           </Row>
         </Container>
