@@ -1,6 +1,6 @@
 .nav__menu__container {
   background-color: #773479;
-  height: fit-content;
+  height: 100%;
   min-height: 100vh;
 }
 .overlay {
@@ -97,7 +97,7 @@
   .nav__menu__container {
     width: 280px !important;
     position: absolute;
-    left: -279px;
+    left: -281px;
     top: 0;
     padding: 0;
     transition: all 0.4s ease-in-out;
@@ -118,6 +118,6 @@
 }
 @media only screen and (max-width: 576px) {
   .nav__menu__container .nav__toggle.open {
-    right: -3.5rem;
+    right: -2.5rem;
   }
 }
