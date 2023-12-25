@@ -1,0 +1,37 @@
+.personal__information .personal__information-info .personal__information-name {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+.personal__information
+  .personal__information-info
+  img.personal__information-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #773479;
+}
+.personal__information .personal__information-title h1 {
+  /* padding: 1rem; */
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #773479;
+}
+
+@media only screen and (max-width: 1200px) {
+  .personal__information .personal__information-title h1 {
+    padding: 1.5rem 0 0 1.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .personal__information .personal__information-title h1 {
+    padding: 0.5rem 0 0 1.25rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .personal__information .personal__information-title h1 {
+    padding: 0.5rem 0 0 0.75rem;
+  }
+}
