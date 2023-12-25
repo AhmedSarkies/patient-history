@@ -37,8 +37,8 @@
   cursor: pointer;
 }
 .nav__menu__container .nav__toggle.open {
-  top: 10px;
-  right: -54px;
+  top: 1rem;
+  right: -5rem;
   background-color: #773479;
   color: #fff;
 }
@@ -87,16 +87,6 @@
   color: #fff;
   background-color: #773479;
 }
-@media only screen and (max-width: 768px) {
-  .nav__menu__container .nav__toggle {
-    font-size: 1rem;
-    padding: 4px 7px;
-  }
-  .nav__menu__container .nav__toggle.open {
-    top: 10px;
-    right: -40px;
-  }
-}
 @media only screen and (max-width: 1200px) {
   .nav__menu__container .nav__toggle.open,
   .nav__menu__container .nav__toggle.close {
@@ -114,5 +104,20 @@
   }
   .nav__menu__container.active {
     left: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav__menu__container .nav__toggle {
+    font-size: 1rem;
+    padding: 4px 7px;
+  }
+  .nav__menu__container .nav__toggle.open {
+    top: 1.5rem;
+    right: -4rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .nav__menu__container .nav__toggle.open {
+    right: -3.5rem;
   }
 }
