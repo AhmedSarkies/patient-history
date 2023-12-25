@@ -79,7 +79,7 @@ const Home = () => {
                   <button
                     type="submit"
                     className="search__btn"
-                    onClick={() => navigate("/patient")}
+                    onClick={() => navigate("/patient/personal-information")}
                   >
                     <svg
                       viewBox="0 0 27 27"
@@ -96,7 +96,7 @@ const Home = () => {
                   <button
                     type="submit"
                     className="home__search__btn search__btn mt-4"
-                    onClick={() => navigate("/patient")}
+                    onClick={() => navigate("/patient/personal-information")}
                   >
                     Search By Code
                   </button>
