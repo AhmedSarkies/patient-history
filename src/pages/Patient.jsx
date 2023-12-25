@@ -6,6 +6,8 @@ import { Col, Container, Row } from "reactstrap";
 
 import { Helmet, Navbar } from "../components";
 
+import "../styles/patient.css";
+
 const Patient = () => {
   return (
     <Helmet title="">
