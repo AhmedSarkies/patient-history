@@ -70,6 +70,9 @@
 .nav__menu__item:hover a {
   color: #773479;
 }
+.nav__menu__item a:focus {
+  outline: none;
+}
 .nav__menu__item a svg {
   fill: #fff;
   transition: all 0.3s ease-in-out;
