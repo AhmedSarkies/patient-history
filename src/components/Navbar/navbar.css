@@ -1,29 +1,30 @@
 .nav__menu__container {
   background-color: #773479;
-  width: 250px;
-  max-width: 250px;
   height: fit-content;
   min-height: 100vh;
 }
-.nav__menu__container .overlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: none;
   opacity: 0;
-  z-index: -1;
+  z-index: 0;
   transition: all 0.4s ease-in-out;
 }
-.nav__menu__container .overlay.active {
+.overlay.active {
   background-color: rgba(0, 0, 0, 0.5);
   display: block;
   opacity: 1;
   transition: all 0.4s ease-in-out;
 }
 .nav__menu__container .logo__container {
-  padding-top: 1rem;
+  padding-top: 0;
+}
+.nav__menu__container .logo__container img.logo {
+  cursor: pointer;
 }
 .nav__menu__container .nav__toggle {
   position: absolute;
@@ -48,7 +49,7 @@
   border: 2px solid;
 }
 .nav__menu__item {
-  padding: 10px;
+  padding: 0;
   list-style: none;
   transition: all 0.3s ease-in-out;
 }
@@ -56,11 +57,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 10px;
   color: #fff;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
-.nav__menu__item:hover {
+.nav__menu__item:hover,
+.nav__menu__item a.active {
   color: #773479;
   background-color: #fff;
 }
@@ -71,7 +74,8 @@
   fill: #fff;
   transition: all 0.3s ease-in-out;
 }
-.nav__menu__item:hover a svg {
+.nav__menu__item:hover a svg,
+.nav__menu__item a.active svg {
   fill: #773479 !important;
 }
 .nav__menu__item.nav__menu__item__title {
@@ -100,7 +104,7 @@
   .nav__menu__container {
     width: 280px !important;
     position: absolute;
-    left: -250px;
+    left: -279px;
     top: 0;
     padding: 0;
     transition: all 0.4s ease-in-out;
