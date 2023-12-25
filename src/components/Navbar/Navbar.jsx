@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { Fragment, useEffect, useState } from "react";
+
+import { NavLink, useNavigate } from "react-router-dom";
+
 import icon from "../../assets/images/logo-transparent.png";
 
 import "./navbar.css";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [active, setActive] = useState(false);
 
   const items = [
@@ -193,7 +196,7 @@ const Navbar = () => {
     },
     {
       key: "pre-eclampsia",
-      label: "Pre-eclampsia",
+      label: "Pre Eclampsia",
       icon: (
         <svg
           width="13"
@@ -220,46 +223,62 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={`nav__menu__container ${active ? "active" : ""}`}>
-      <div
-        className={`nav__toggle ${active ? "close" : "open"}`}
-        onClick={() => setActive(!active)}
-      >
-        {!active ? (
-          <i className="ri-menu-line"></i>
-        ) : (
-          <i className="ri-close-line"></i>
-        )}
-      </div>
+    <Fragment>
       <div
         className={`overlay ${active ? "active" : ""}`}
         onClick={() => setActive(!active)}
       ></div>
-      <div className="logo__container d-flex justify-content-center align-items-center">
-        <img src={icon} alt="logo" className="home__logo" width={"140px"} />
+      <div className={`nav__menu__container ${active ? "active" : ""}`}>
+        <div
+          className={`nav__toggle ${active ? "close" : "open"}`}
+          onClick={() => setActive(!active)}
+        >
+          {!active ? (
+            <i className="ri-menu-line"></i>
+          ) : (
+            <i className="ri-close-line"></i>
+          )}
+        </div>
+        <div className="logo__container d-flex justify-content-center align-items-center">
+          <img
+            src={icon}
+            alt="logo"
+            className="logo"
+            width={"140px"}
+            onClick={() => {
+              navigate("/");
+              setActive(false);
+            }}
+          />
+        </div>
+        <ul className="nav__menu p-0 pb-2">
+          {items.map((item) => (
+            <li
+              key={item.key}
+              className={`nav__menu__item ${
+                !item.icon ? "nav__menu__item__title p-3 ps-5" : ""
+              }`}
+              onClick={() => setActive(false)}
+            >
+              {item.icon ? (
+                <NavLink
+                  to={`/patient/${item.key}`}
+                  style={
+                    item.style
+                      ? { paddingLeft: "4.5rem" }
+                      : { paddingLeft: "3rem" }
+                  }
+                >
+                  {item.icon} {item.label}
+                </NavLink>
+              ) : (
+                `${item.label}`
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className="nav__menu p-0 pt-2 pb-2">
-        {items.map((item) => (
-          <li
-            key={item.key}
-            className={`nav__menu__item ${
-              !item.icon ? "nav__menu__item nav__menu__item__title" : ""
-            }`}
-            style={
-              item.style ? { paddingLeft: "2.5rem" } : { paddingLeft: "1rem" }
-            }
-          >
-            {item.icon ? (
-              <Link to={`/${"personal-information"}`}>
-                {item.icon} {item.label}
-              </Link>
-            ) : (
-              `${item.label}`
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
+    </Fragment>
   );
 };
 
