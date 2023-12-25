@@ -46,7 +46,7 @@
   font-size: 1rem;
   font-weight: 600;
 }
-.login__form .form__group input {
+.login__form .form__group .form__input {
   background: transparent;
   border: 1px solid #ababab;
   border-radius: 7px;
@@ -58,10 +58,10 @@
   font-size: 1.1rem;
   transition: all 0.3s ease-in-out;
 }
-.login__form .form__group input:focus {
+.login__form .form__group .form__input:focus {
   border: 1px solid #0f4fff;
 }
-.login__form .form__group input:focus::placeholder {
+.login__form .form__group .form__input:focus::placeholder {
   color: transparent;
   opacity: 0;
   font-size: 0;
@@ -104,7 +104,7 @@
   .login__form .form__group label {
     font-size: 0.9rem;
   }
-  .login__form .form__group input {
+  .login__form .form__group .form__input {
     font-size: 1rem;
   }
   .login__form .reset__password,
