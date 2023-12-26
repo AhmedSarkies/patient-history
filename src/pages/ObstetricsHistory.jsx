@@ -26,8 +26,8 @@ const ObstetricsHistory = () => {
   };
 
   return (
-    <Helmet title="General Examination">
-      <section className="general__examination">
+    <Helmet title="Obstetrics history">
+      <section className="obstetrics__history">
         <Container style={{ maxWidth: "100%" }}>
           <Row style={{ paddingBottom: "2.5rem" }}>
             <Col lg="12" className="pe-0 pe-sm-3">
