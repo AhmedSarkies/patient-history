@@ -265,7 +265,7 @@ const Navbar = () => {
                   to={`/patient/${item.key}`}
                   style={
                     item.style
-                      ? { paddingLeft: "4.5rem" }
+                      ? { paddingLeft: "4rem" }
                       : { paddingLeft: "3rem" }
                   }
                 >
