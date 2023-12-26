@@ -116,8 +116,3 @@
     right: -4rem;
   }
 }
-@media only screen and (max-width: 576px) {
-  .nav__menu__container .nav__toggle.open {
-    right: -2.5rem;
-  }
-}
