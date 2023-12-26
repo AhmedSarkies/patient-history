@@ -244,7 +244,7 @@ const GynecologicalHistory = () => {
                         </div>
                       </div>
                     </Col>
-                    {/* don't forget to update select input like UI */}
+                    {/* don't forget to update select input like UI  */}
                     <Col lg="4" className="me-5">
                       <div className="form__group">
                         <label className="form__label" htmlFor="mentionMethod">
