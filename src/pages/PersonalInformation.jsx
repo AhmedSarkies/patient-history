@@ -47,7 +47,7 @@ const PersonalInformation = () => {
             <Col lg="12" className="pe-3">
               <PersonalInformationComponent logout={false} />
             </Col>
-            <Col lg="12" className="mt-3">
+            <Col lg="12" className="mt-3 mb-2">
               <div className="page__title">
                 <h1 className="">Personal Information</h1>
               </div>
