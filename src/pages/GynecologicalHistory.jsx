@@ -324,7 +324,7 @@ const GynecologicalHistory = () => {
                     >
                       <button
                         type="submit"
-                        className="col-lg-2 col-sm-3 col-4 save__btn"
+                        className="col-lg-2 col-sm-3 col-4 save__btn me-1"
                       >
                         Save
                       </button>
