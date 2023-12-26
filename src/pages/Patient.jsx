@@ -18,11 +18,11 @@ const Patient = () => {
             paddingLeft: "0px",
           }}
         >
-          <Row>
+          <Row className="position-relative pe-0">
             <Col xl="3">
               <Navbar />
             </Col>
-            <Col xl="9">
+            <Col xl="9" className="pe-0">
               <div className="patient__content">
                 <Outlet />
               </div>
