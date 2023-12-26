@@ -61,7 +61,7 @@
     padding: 1.5rem 0 0 1.5rem;
   }
   .form__container {
-    padding-right: 1.5rem;
+    padding-right: 1rem;
   }
   .contact__information,
   .contact__information h1 {
@@ -71,13 +71,18 @@
     padding-right: 0.5rem !important;
   }
 }
+@media only screen and (max-width: 992px) {
+  .form__container {
+    padding-right: 1.5rem;
+  }
+}
 @media only screen and (max-width: 768px) {
   .page__title h1,
   .form__container {
     padding: 0.5rem 0 0 1.25rem;
   }
   .form__container {
-    padding-right: 0.5rem;
+    padding-right: 1.25rem;
   }
 }
 @media only screen and (max-width: 576px) {
