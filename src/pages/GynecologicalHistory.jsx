@@ -39,7 +39,7 @@ const GynecologicalHistory = () => {
       <section className="gynecological__history">
         <Container style={{ maxWidth: "100%" }}>
           <Row style={{ paddingBottom: "2.5rem" }}>
-            <Col lg="12" className="pe-0 pe-sm-3">
+            <Col lg="12" className="pe-0 pe-sm-3 pe-xs-4">
               <PersonalInformationComponent logout={true} />
             </Col>
             <Col lg="12" className="mt-3 mb-2">
