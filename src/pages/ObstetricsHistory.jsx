@@ -30,7 +30,7 @@ const ObstetricsHistory = () => {
       <section className="obstetrics__history">
         <Container style={{ maxWidth: "100%" }}>
           <Row style={{ paddingBottom: "2.5rem" }}>
-            <Col lg="12" className="pe-0 pe-sm-3">
+            <Col lg="12" className="pe-0 pe-sm-3 pe-xs-4">
               <PersonalInformationComponent logout={true} />
             </Col>
             <Col lg="12" className="mt-3 mb-3">
@@ -46,9 +46,15 @@ const ObstetricsHistory = () => {
                   method="post"
                   onSubmit={submitHandler}
                 >
-                  <Row className="d-flex justify-align-center justify-content-start gap-5">
+                  <Row className="d-flex justify-align-center justify-content-start gap-lg-5 gap-4">
                     <Col lg="12">
-                      <Col lg="6" className="pe-0 pe-lg-3">
+                      <Col
+                        lg="6"
+                        md="8"
+                        sm="10"
+                        xs="12"
+                        className="pe-0 pe-lg-3"
+                      >
                         <div className="form__group d-flex justify-content-between align-items-center flex-row gap-2">
                           <label className="form__label" htmlFor="gravidity">
                             Gravidity
@@ -65,7 +71,13 @@ const ObstetricsHistory = () => {
                       </Col>
                     </Col>
                     <Col lg="12">
-                      <Col lg="6" className="pe-0 pe-lg-3">
+                      <Col
+                        lg="6"
+                        md="8"
+                        sm="10"
+                        xs="12"
+                        className="pe-0 pe-lg-3"
+                      >
                         <div className="form__group d-flex justify-content-between align-items-center flex-row gap-2">
                           <label className="form__label" htmlFor="parity">
                             Parity
@@ -82,7 +94,13 @@ const ObstetricsHistory = () => {
                       </Col>
                     </Col>
                     <Col lg="12">
-                      <Col lg="6" className="pe-0 pe-lg-3">
+                      <Col
+                        lg="6"
+                        md="8"
+                        sm="10"
+                        xs="12"
+                        className="pe-0 pe-lg-3"
+                      >
                         <div className="form__group d-flex justify-content-between align-items-center flex-row gap-2">
                           <label className="form__label" htmlFor="abortion">
                             Abortion
