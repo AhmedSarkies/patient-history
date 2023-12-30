@@ -47,12 +47,12 @@ const CervicalCancer = () => {
             <Col lg="12" className="mt-4 col__form">
               <div className="form__container">
                 <form
-                  className="form"
+                  className="form ps-2 ps-lg-4"
                   action=""
                   method="post"
                   onSubmit={submitHandler}
                 >
-                  <Row className="d-flex justify-align-start justify-content-start gap-5">
+                  <Row className="d-flex justify-align-start justify-content-start gap-5 ps-0 ps-lg-3">
                     <Col lg="12">
                       <Col md="4" className="pe-0 pe-lg-3">
                         <div className="form__group">
@@ -97,9 +97,9 @@ const CervicalCancer = () => {
                       </Col>
                     </Col>
                     <Col lg="12" className="pe-3 pe-lg-5">
-                      <Row className="d-flex justify-content-between align-items-center gap-5">
-                        <Col lg="7" className="table__container">
-                          <Col lg="12" className="table__content">
+                      <Row className="d-flex justify-content-start align-items-start gap-5">
+                        <Col lg="7" className="table__container mt-3">
+                          <Col lg="12" className="table__content mt-3">
                             <table className="table">
                               <thead>
                                 <tr>
@@ -201,8 +201,8 @@ const CervicalCancer = () => {
                               placeholder="Enter your recommendations"
                               id="recommendations"
                               style={{
-                                minHeight: "150px",
-                                maxHeight: "150px",
+                                minHeight: "215px",
+                                maxHeight: "215px",
                                 resize: "none",
                               }}
                               value={recommendations}
@@ -215,7 +215,7 @@ const CervicalCancer = () => {
                       </Row>
                     </Col>
                     <Col lg="12">
-                      <Col lg="4" className="pe-0 pe-lg-3">
+                      <Col lg="4" md="6" sm="8" className="pe-0 pe-lg-3">
                         <div className="form__group">
                           <label
                             className="form__label"
