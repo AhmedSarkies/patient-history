@@ -41,12 +41,12 @@ const ObstetricsHistory = () => {
             <Col lg="12" className="mt-4 col__form">
               <div className="form__container">
                 <form
-                  className="form"
+                  className="form ps-2 ps-lg-4"
                   action=""
                   method="post"
                   onSubmit={submitHandler}
                 >
-                  <Row className="d-flex justify-align-center justify-content-start gap-lg-5 gap-4">
+                  <Row className="d-flex justify-align-center justify-content-start gap-lg-5 gap-4 ps-0 ps-lg-3">
                     <Col lg="12">
                       <Col
                         lg="6"
@@ -138,7 +138,7 @@ const ObstetricsHistory = () => {
                       </Col>
                     </Col>
                     <Col lg="12">
-                      <Col lg="4" className="pe-0 pe-lg-3">
+                      <Col lg="4" md="6" sm="8" className="pe-0 pe-lg-3">
                         <div className="form__group">
                           <label
                             className="form__label"
