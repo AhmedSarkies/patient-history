@@ -132,7 +132,7 @@ const GeneralExamination = () => {
                       </Col>
                     </Col>
                     <Col lg="12">
-                      <Col lg="4" className="pe-0 pe-lg-3">
+                      <Col lg="4" md="6" sm="8" className="pe-0 pe-lg-3">
                         <div className="form__group">
                           <label
                             className="form__label"
