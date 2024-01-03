@@ -142,13 +142,9 @@ const Osteoporosis = () => {
                                 >
                                   Choose estrogen use
                                 </option>
-                                <option value="negative">Negative</option>
-                                <option value="positive2ndDegree">
-                                  Positive in 2nd degree
-                                </option>
-                                <option value="positive1stDegree">
-                                  Positive in 1st degree
-                                </option>
+                                <option value="1child">1 Child</option>
+                                <option value=">1child">{"> 1 Child"}</option>
+                                <option value="stillBirth">Still birth</option>
                               </select>
                             </div>
                           </Col>
