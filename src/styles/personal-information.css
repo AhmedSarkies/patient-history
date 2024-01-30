@@ -39,7 +39,8 @@
 .col__submit {
   padding-right: 1.5rem !important;
 }
-.save__btn {
+.save__btn,
+.edit__btn {
   background-color: #773479;
   color: #fff;
   border: 2px solid #773479;
@@ -54,7 +55,23 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-
+.edit__btn {
+  background: #0030b4;
+  border-color: #0030b4;
+}
+.form-editing-field.table__input,
+.form-editing-field {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #757575 !important;
+}
+.form-editing-field-textarea {
+  border: 2px solid #ababab8f;
+  border-radius: 7px;
+  padding: 10px 25px 10px 10px;
+  font-size: 0.9rem;
+  min-height: 200px;
+}
 @media only screen and (max-width: 1200px) {
   .page__title h1,
   .form__container {
