@@ -37,4 +37,8 @@
   .form__label-file {
     font-size: 1rem !important;
   }
+  .edit__btn,
+  .download__btn {
+    font-size: 0.9rem !important;
+  }
 }
