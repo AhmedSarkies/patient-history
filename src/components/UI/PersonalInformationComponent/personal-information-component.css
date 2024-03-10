@@ -23,9 +23,15 @@
 }
 @media screen and (max-width: 576px) {
   .logout__btn,
-  .personal__information-info .personal__information-name {
+  .personal__information-info {
     font-size: 0.8rem !important;
     padding: 0.25rem 0.5rem;
+  }
+  .personal__information-info {
+    padding: 0.25rem !important;
+  }
+  .personal__information-name {
+    font-size: 0.8rem !important;
   }
   .personal__information-info img.personal__information-img {
     width: 35px;

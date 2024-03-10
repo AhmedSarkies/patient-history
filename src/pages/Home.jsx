@@ -9,14 +9,27 @@ import { Helmet } from "../components";
 import logo from "../assets/images/logo-transparent.png";
 
 import "../styles/home.css";
+import { useFormik } from "formik";
+import { number, object } from "yup";
+
+// Schema for form validation
+const validationSchema = object({
+  search: number("Search must be a number")
+    .required("Search is required")
+    .min(1),
+});
 
 const Home = () => {
   const navigate = useNavigate();
-  const [search, setSearch] = useState("");
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-  };
+  const formik = useFormik({
+    initialValues: {
+      search: "",
+    },
+    validationSchema,
+    onSubmit: (values) => {
+      navigate(`/personal-information/${values.search}`);
+    },
+  });
 
   return (
     <Helmet title="">
@@ -34,7 +47,7 @@ const Home = () => {
               className="d-flex align-items-center justify-content-end ps-0"
             >
               <div className="home__btns w-100">
-                <Link to="/login" className="add__patient">
+                <Link to="/add-patient" className="add__patient">
                   <span className="d-flex justify-content-center align-items-center">
                     <svg
                       viewBox="0 0 24 24"
@@ -68,18 +81,24 @@ const Home = () => {
             </Col>
             <Col xs="12">
               <div className="home__search text-center">
-                <form className="search__form" onSubmit={handleSearch}>
+                <form className="search__form" onSubmit={formik.handleSubmit}>
+                  {formik.errors.search && formik.touched.search ? (
+                    <div className="text-danger d-flex justify-content-center align-items-center">
+                      <span className="w-50">{formik.errors.search}</span>
+                    </div>
+                  ) : null}
                   <input
                     type="text"
                     placeholder="Search for a patient"
                     className="home__search__input"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+                    name="search"
+                    value={formik.values.search}
+                    onChange={formik.handleChange}
                   />
                   <button
                     type="submit"
                     className="search__btn"
-                    onClick={() => navigate("/patient/personal-information")}
+                    onClick={formik.handleSubmit}
                   >
                     <svg
                       viewBox="0 0 27 27"
@@ -96,7 +115,7 @@ const Home = () => {
                   <button
                     type="submit"
                     className="home__search__btn search__btn mt-4"
-                    onClick={() => navigate("/patient/personal-information")}
+                    onClick={formik.handleSubmit}
                   >
                     Search By Code
                   </button>

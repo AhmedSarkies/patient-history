@@ -11,18 +11,86 @@
 .form__radio input {
   cursor: pointer;
 }
-select.form__input {
-  background-color: #ececec !important;
-  color: #ababab !important;
+.form__group .form__input {
+  font-weight: 600;
+  font-size: 1rem;
 }
-select.form__input:focus {
-  outline: none !important;
-  border: 1px solid #ababab !important;
-  font-weight: 300 !important;
-  
+.form__group .form__input.disabled:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
 }
-select.form__input option {
-  color: #000 !important;
-  background-color: #f4f4f4 !important;
-  border-radius: none !important;
+.form__group .form__input.enabled {
+  background: transparent;
+  cursor: auto;
+  pointer-events: all;
+  color: #0f4fff;
+  outline: #0f4fff;
+  border: 1px solid #0f4fff;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown {
+  z-index: 10000;
+  width: 100%;
+  position: relative;
+}
+.dropdown,
+.dropdown * {
+  z-index: 10;
+}
+.dropdown .dropdown-btn {
+  width: 100% !important;
+  cursor: pointer;
+  color: #777;
+  border: 1px solid #dadada;
+  padding: 7px 10px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: not-allowed;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown .dropdown-btn.active {
+  color: #0f4fff;
+  border: 1px solid #0f4fff;
+  cursor: pointer;
+  pointer-events: all;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown .dropdown-icon {
+  rotate: 0;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown .dropdown-icon.active {
+  rotate: 180deg;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown-content {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  /* top: 110%; */
+  right: 0;
+  width: 100%;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.07);
+  z-index: 555;
+  background: #fff;
+  color: #0f4fff;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown-content.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown-content .item {
+  padding: 10px;
+  cursor: pointer;
+}
+.dropdown-content .item:hover {
+  background: #dadada;
 }

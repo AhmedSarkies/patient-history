@@ -31,11 +31,11 @@ const ObstetricsHistory = () => {
         <Container style={{ maxWidth: "100%" }}>
           <Row style={{ paddingBottom: "2.5rem" }}>
             <Col lg="12" className="pe-0 pe-sm-3 pe-xs-4">
-              <PersonalInformationComponent logout={true} />
+              <PersonalInformationComponent logout={true} patient={false} />
             </Col>
             <Col lg="12" className="mt-3 mb-3">
               <div className="page__title">
-                <h1 className="">Obstetrics history</h1>
+                <h1>Obstetrics history</h1>
               </div>
             </Col>
             <Col lg="12" className="mt-4 col__form">

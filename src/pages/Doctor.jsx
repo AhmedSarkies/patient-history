@@ -8,7 +8,7 @@ import { Helmet, Navbar } from "../components";
 
 import "../styles/patient.css";
 
-const Patient = () => {
+const Doctor = () => {
   return (
     <Helmet title="">
       <section className="patient">
@@ -22,7 +22,7 @@ const Patient = () => {
             <Col xl="3">
               <Navbar />
             </Col>
-            <Col xl="9">
+            <Col xl="9" className="pe-0">
               <div className="patient__content">
                 <Outlet />
               </div>
@@ -34,4 +34,4 @@ const Patient = () => {
   );
 };
 
-export default Patient;
+export default Doctor;

@@ -6,7 +6,7 @@ import { Helmet, PersonalInformationComponent } from "../components";
 
 import "../styles/uterine-cancer.css";
 
-const UterineCancer = () => {
+const PatientUterineCancer = () => {
   const [lynchSyndrome, setLynchSyndrome] = useState("");
   const [irregularBleeding, setIrregularBleeding] = useState("");
   const [resultPerimetrium, setResultPerimetrium] = useState("");
@@ -41,7 +41,7 @@ const UterineCancer = () => {
         <Container style={{ maxWidth: "100%" }}>
           <Row style={{ paddingBottom: "2.5rem" }}>
             <Col lg="12" className="pe-0 pe-sm-3 pe-xs-4">
-              <PersonalInformationComponent logout={true} patient={false} />
+              <PersonalInformationComponent logout={true} patient={true} />
             </Col>
             <Col lg="12" className="mt-3 mb-2">
               <div className="page__title">
@@ -454,4 +454,4 @@ const UterineCancer = () => {
   );
 };
 
-export default UterineCancer;
+export default PatientUterineCancer;
